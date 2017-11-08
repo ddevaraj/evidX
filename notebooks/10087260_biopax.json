@@ -1,0 +1,1437 @@
+[
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_refseq_NP_011362_3",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "refseq"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "NP_011362.3"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-13212_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "intact"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "EBI-13212"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0356"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/Evidence_1494456508179_p951835",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#Evidence"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#experimentalForm": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ExperimentalForm_1494456508181"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_1NM7",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "rcsb pdb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "1NM7"
+      }
+    ]
+  },
+  {
+    "@id": "http://identifiers.org/psimi/MI:0356",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipTypeVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "identity"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_1494456508171"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_mint_MINT-7721156",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "mint"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MINT-7721156"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR025655",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "interpro"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "IPR025655"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_1N5Z",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "rcsb pdb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "1N5Z"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_uniprotkb_D6VTZ8_secondary-ac",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "uniprotkb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "D6VTZ8"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0360"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/Evidence_1494456508175_p951833",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#Evidence"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#experimentalForm": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ExperimentalForm_1494456508177"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_sgd_S000003121",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "sgd"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "S000003121"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_2V1R",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "rcsb pdb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "2V1R"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/ModificationFeature_1494456508176",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#ModificationFeature"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#featureLocationType": [
+      {
+        "@id": "http://purl.org/ske/semsci17/SequenceRegionVocabulary_binding_site"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#modificationType": [
+      {
+        "@id": "http://purl.org/ske/semsci17/SequenceModificationVocabulary_binding_region"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/SequenceRegionVocabulary_binding_site",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#SequenceRegionVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "binding site"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_mint_MINT-7721156"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/Provenance_MINT",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#Provenance"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#comment": [
+      {
+        "@value": "Attribute{value='http://mint.bio.uniroma2.it/mint', name='url', nameAc='MI:0614'}"
+      },
+      {
+        "@value": "Attribute{value='http://mint.bio.uniroma2.it/mint', name='url', nameAc='null'}"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#displayName": [
+      {
+        "@value": "MINT"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0471"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_uniprotkb_P53112",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "uniprotkb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "P53112"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/Complex_1494456508182",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#Complex"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#component": [
+      {
+        "@id": "http://purl.org/ske/semsci17/Protein_uniprotkb_P53112_identity_1494456508178"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/Protein_uniprotkb_P80667_identity_1494456508174"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#dataSource": [
+      {
+        "@id": "http://purl.org/ske/semsci17/Provenance_MINT"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#displayName": [
+      {
+        "@value": "pex13-pex14-1"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#evidence": [
+      {
+        "@id": "http://purl.org/ske/semsci17/Evidence_1494456508170_i951832_e951829"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_mint_MINT-7721152"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-6962910_identity"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/ProteinReference_uniprotkb_P53112_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#ProteinReference"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#displayName": [
+      {
+        "@value": "pex14_yeast"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#name": [
+      {
+        "@value": "G1870"
+      },
+      {
+        "@value": "Peroxin-14"
+      },
+      {
+        "@value": "PEX14"
+      },
+      {
+        "@value": "Peroxisomal membrane protein PEX14"
+      },
+      {
+        "@value": "YGL153W"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#organism": [
+      {
+        "@id": "http://purl.org/ske/semsci17/BioSource_taxonomy_559292"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#sequence": [
+      {
+        "@value": "MSDVVSKDRKALFDSAVSFLKDESIKDAPLLKKIEFLKSKGLTEKEIEIAMKEPKKDGIVGDEVSKKIGSTENRASQDMYLYEAMPPTLPHRDWKDYFVMATATAGLLYGAYEVTRRYVIPNILPEAKSKLEGDKKEIDDQFSKIDTVLNAIEAEQAEFRKKESETLKELSDTIAELKQALVQTTRSREKIEDEFRIVKLEVVNMQNTIDKFVSDNDGMQELNNIQKEMESLKSLMNNRMESGNAQDNRLFSISPNGIPGIDTIPSASEILAKMGMQEESDKEKENGSDANKDDNAVPAWKKAREQTIDSNASIPEWQKNTAANEISVPDWQNGQVEDSIP"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR025655"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_1990415"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_refseq_NP_011362_3"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-13212_identity"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0005778"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_2V1R"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0016560"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_sgd_S000003121"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_uniprotkb_P53112"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR006785"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_uniprotkb_D6VTZ8_secondary-ac"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_1990429"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0030674"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_1N5Z"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_mint_MINT-7721152",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "mint"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MINT-7721152"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0016021",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "go"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "GO:0016021"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_1990429",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "go"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "GO:1990429"
+      }
+    ]
+  },
+  {
+    "@id": "http://identifiers.org/psimi/MI:0358",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipTypeVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "primary-reference"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_1494456508173"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0471",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "psi-mi"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0471"
+      }
+    ]
+  },
+  {
+    "@id": "http://identifiers.org/psimi/MI:0360",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipTypeVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "secondary-ac"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_1494456508172"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-6962910_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "intact"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "EBI-6962910"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0356"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_1494456508172",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "PSI-MI"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0360"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR001452",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "interpro"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "IPR001452"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/Protein_uniprotkb_P53112_identity_1494456508178",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#Protein"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#comment": [
+      {
+        "@value": "psi-mi participant"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#dataSource": [
+      {
+        "@id": "http://purl.org/ske/semsci17/Provenance_MINT"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#displayName": [
+      {
+        "@value": "pex14_yeast"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#entityReference": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ProteinReference_uniprotkb_P53112_identity"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#evidence": [
+      {
+        "@id": "http://purl.org/ske/semsci17/Evidence_1494456508179_p951835"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#name": [
+      {
+        "@value": "Peroxisomal membrane protein PEX14"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/ExperimentalFormVocabulary_neutral_component",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#ExperimentalFormVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "neutral component"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0497"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/doco/FigureLabel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_1990415",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "go"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "GO:1990415"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/Protein_uniprotkb_P80667_identity_1494456508174",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#Protein"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#comment": [
+      {
+        "@value": "psi-mi participant"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#dataSource": [
+      {
+        "@id": "http://purl.org/ske/semsci17/Provenance_MINT"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#displayName": [
+      {
+        "@value": "pex13_yeast"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#entityReference": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ProteinReference_uniprotkb_P80667_identity"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#evidence": [
+      {
+        "@id": "http://purl.org/ske/semsci17/Evidence_1494456508175_p951833"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#name": [
+      {
+        "@value": "Peroxisomal membrane protein PAS20"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR006785",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "interpro"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "IPR006785"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-13206_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "intact"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "EBI-13206"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0356"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/PublicationXref_pubmed_10087260",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#PublicationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "pubmed"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "10087260"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0396",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "psi-mi"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0396"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/cito/describes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/InteractionVocabulary_physical_association",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#InteractionVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "physical association"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0915"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_uniprotkb_P80667",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "uniprotkb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "P80667"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_mint_MINT-6742807_primary-reference",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "mint"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MINT-6742807"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0358"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0117",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "psi-mi"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0117"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_taxonomy_559292",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "Taxonomy"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "559292"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_uniprotkb_P80667_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "uniprotkb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "P80667"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0356"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_mint_MINT-7721162",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "mint"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MINT-7721162"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/10087260_biopax.xml",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.biopax.org/release/biopax-level3.owl#"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_1JQQ",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "rcsb pdb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "1JQQ"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/ModificationFeature_1494456508180",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#ModificationFeature"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#featureLocationType": [
+      {
+        "@id": "http://purl.org/ske/semsci17/SequenceRegionVocabulary_binding_site"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#modificationType": [
+      {
+        "@id": "http://purl.org/ske/semsci17/SequenceModificationVocabulary_binding_region"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0018",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "psi-mi"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0018"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-6962899_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "intact"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "EBI-6962899"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0356"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_sgd_S000004181",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "sgd"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "S000004181"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/SequenceModificationVocabulary_binding_region",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#SequenceModificationVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "binding region"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0117"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/EvidenceCodeVocabulary_predetermined",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#EvidenceCodeVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "predetermined"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0396"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/BioSource_taxonomy_559292",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#BioSource"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#standardName": [
+      {
+        "@value": "yeast"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_taxonomy_559292"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR007223",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "interpro"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "IPR007223"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_1494456508171",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "PSI-MI"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0356"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0497",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "psi-mi"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0497"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/ProteinReference_uniprotkb_P80667_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#ProteinReference"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#displayName": [
+      {
+        "@value": "pex13_yeast"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#name": [
+      {
+        "@value": "Peroxin-13"
+      },
+      {
+        "@value": "L9470.1"
+      },
+      {
+        "@value": "YLR191W"
+      },
+      {
+        "@value": "Peroxisomal membrane protein PAS20"
+      },
+      {
+        "@value": "PAS20"
+      },
+      {
+        "@value": "PEX13"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#organism": [
+      {
+        "@id": "http://purl.org/ske/semsci17/BioSource_taxonomy_559292"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#sequence": [
+      {
+        "@value": "MSSTAVPRPKPWETSASLEEPQRNAQSLSAMMTSNQQDSRPTEESNNSNSASESAPEVLPRPAALNSSGTYGESNTIPGIYGNSNYGIPYDNNPYSMNSIYGNSIGRYGYGGSYYGNNYGSFYGGGYGAGAGYGMNNGSGLGESTKATFQLIESLIGAVTGFAQMLESTYMATHNSFFTMISVAEQFGNLKEMLGSFFGIFAIMKFLKKILYRATKGRLGIPPKNFAESEGSKNKLIEDFQKFNDSGTINSNEKATRRKISWKPLLFFLMAVFGFPYLLNKFITKLQTSGTIRASQGNGSEPIDPSKLEFARALYDFVPENPEMEVALKKGDLMAILSKKDPLGRDSDWWKVRTKNGNIGYIPYNYIEIIKRRKKIEHVDDETRTH"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0030674"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_1N5Z"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR007223"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_refseq_NP_013292_1"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_uniprotkb_P80667"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_1NM7"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_sgd_S000004181"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_1990415"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0016021"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_interpro_IPR001452"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_2V1R"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0016560"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_1990429"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0005778"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_uniprotkb_D6VYJ4_secondary-ac"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-13206_identity"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_rcsb_pdb_1JQQ"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_doi_10_1083_jcb_144_6_1151_secondary-ac",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "doi"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "10.1083/jcb.144.6.1151"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0360"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0005778",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "go"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "GO:0005778"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/Evidence_1494456508170_i951832_e951829",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#Evidence"
+    ],
+    "http://purl.org/spar/cito/describes": [
+      {
+        "@id": "http://www.ncbi.nlm.nih.gov/pubmed/10087260#f8"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#comment": [
+      {
+        "@value": "Girzalsky W., Rehling P., Stein K., Kipper J., Blank L., Kunau WH., Erdmann R. author-list MI:0636"
+      },
+      {
+        "@value": "girzalsky-1999-1"
+      },
+      {
+        "@value": "mimix curation mimix curation MI:0960"
+      },
+      {
+        "@value": "Host Organism{names=Names{shortLabel='yeast', fullName='Saccharomyces cerevisiae (strain ATCC 204508 / S288c)', aliases=null}, cellType=null, compartment=null, tissue=null, ncbiTaxId=559292}"
+      },
+      {
+        "@value": "J. Cell Biol. (0021-9525) journal MI:0885"
+      },
+      {
+        "@value": "Figure:f8"
+      },
+      {
+        "@value": "1999 publication year MI:0886"
+      },
+      {
+        "@value": "Involvement of Pex13p in Pex14p localization and peroxisomal targeting signal 2-dependent protein import into peroxisomes."
+      },
+      {
+        "@value": "SH3_yeast comment MI:0612"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#evidenceCode": [
+      {
+        "@id": "http://purl.org/ske/semsci17/EvidenceCodeVocabulary_predetermined"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/EvidenceCodeVocabulary_2_hybrid"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/PublicationXref_pubmed_10087260"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_mint_MINT-7721150"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_intact_EBI-6962899_identity"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_doi_10_1083_jcb_144_6_1151_secondary-ac"
+      },
+      {
+        "@id": "http://purl.org/ske/semsci17/RelationshipXref_mint_MINT-6742807_primary-reference"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_mint_MINT-7721150",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "mint"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MINT-7721150"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/ExperimentalForm_1494456508177",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#ExperimentalForm"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#comment": [
+      {
+        "@value": "[ModificationFeature: [binding region]]"
+      },
+      {
+        "@value": "[ExperimentalFormVocabulary_neutral component]"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#experimentalFeature": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ModificationFeature_1494456508176"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#experimentalFormDescription": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ExperimentalFormVocabulary_neutral_component"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_uniprotkb_D6VYJ4_secondary-ac",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "uniprotkb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "D6VYJ4"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0360"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_uniprotkb_P53112_identity",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "uniprotkb"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "P53112"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#relationshipType": [
+      {
+        "@id": "http://identifiers.org/psimi/MI:0356"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_refseq_NP_013292_1",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "refseq"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "NP_013292.1"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/EvidenceCodeVocabulary_2_hybrid",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#EvidenceCodeVocabulary"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#term": [
+      {
+        "@value": "2 hybrid"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#xref": [
+      {
+        "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0018"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_psi-mi_MI_0915",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "psi-mi"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0915"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/ExperimentalForm_1494456508181",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#ExperimentalForm"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#comment": [
+      {
+        "@value": "[ModificationFeature: [binding region]]"
+      },
+      {
+        "@value": "[ExperimentalFormVocabulary_neutral component]"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#experimentalFeature": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ModificationFeature_1494456508180"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#experimentalFormDescription": [
+      {
+        "@id": "http://purl.org/ske/semsci17/ExperimentalFormVocabulary_neutral_component"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0016560",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "go"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "GO:0016560"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/RelationshipXref_go_GO_0030674",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "go"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "GO:0030674"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/ske/semsci17/UnificationXref_1494456508173",
+    "@type": [
+      "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#db": [
+      {
+        "@value": "PSI-MI"
+      }
+    ],
+    "http://www.biopax.org/release/biopax-level3.owl#id": [
+      {
+        "@value": "MI:0358"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ncbi.nlm.nih.gov/pubmed/10087260#f8",
+    "@type": [
+      "http://purl.org/spar/doco/FigureLabel"
+    ]
+  }
+]
