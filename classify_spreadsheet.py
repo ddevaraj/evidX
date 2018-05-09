@@ -30,6 +30,7 @@ from nltk.tokenize import RegexpTokenizer
 from sklearn.metrics import confusion_matrix
 
 from rep_reader import RepReader
+from keras_configs import SuperSimpleLSTMClassifier
 
 import matplotlib.pyplot as plt
 from tqdm import tqdm
@@ -63,63 +64,35 @@ if __name__ == '__main__':
     start = datetime.datetime.now()
 
     parser = argparse.ArgumentParser()
-    '''
-    parser.add_argument('-i', '--inFile', help='Input File')
-    parser.add_argument('-t', '--textColumn', help='Name of text column')
-    parser.add_argument('-l', '--labelColumn', help='Name of text column')
-    parser.add_argument('-e', '--esIndex', help='ElasticSearch Index Name')
-    parser.add_argument('-m', '--modelFile', help='Keras model file')
-    '''
-    '''
-    SIGNATURE FOR ADDING FLAGS
-    add_boolean_argument(parser, 'full_text_pdf')
-    '''
+
+    parser.add_argument('inFile', help='Input File')
+    parser.add_argument('textColumn', help='Name of text column')
+    parser.add_argument('labelColumn', help='Name of text column')
+    parser.add_argument('esIndex', help='ElasticSearch Index Name')
+    parser.add_argument('modelFile', help='Keras model file')
+    parser.add_argument('testSize', help='Size of held-out test set')
+
+    add_boolean_argument(parser, 'randomizeTestSet')
+
     args = parser.parse_args()
 
-    base_dir = '/Users/Gully/Documents/Projects/2_active/corpora_local/intact/2018-04-17-cleanup/'
-    index_name = 'oa_all_fasttext'
-    model_file_name = 'i_meth_label.model.h5'
-    rep_reader = RepReader(index_name=index_name,elastic=True)
+    #model_file_name = 'i_meth_label.model.h5'
+    rep_reader = RepReader(index_name=args.esIndex,elastic=True)
     # From https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/input_fn/boston.py
 
     COLUMNS = ["ID", "i_meth", "p_meth", "pmid", "subfig", "text"]
     FEATURES = ["text"]
     LABEL = "p_meth"
 
-    interaction_df = pd.read_csv(
-        base_dir + 'ontologies/i_meth_codes.tsv',
-        sep='\t', names=['text','uri','label'],index_col=0)
-    interaction_df
-
-    participant_df = pd.read_csv(
-        base_dir + 'ontologies/p_meth_codes.tsv',
-        sep='\t', names=['text','uri','label'],index_col=0)
-    participant_df
-
-    df = pd.read_csv(
-        base_dir + 'oa/intact_records_and_captions.tsv',
-        sep='\t', names=COLUMNS, skiprows=1, index_col=0)
-
-    df['i_meth_label'] = interaction_df.loc[df['i_meth']]['label'].tolist()
-    df['p_meth_label'] = participant_df.loc[df['p_meth']]['label'].tolist()
-
-    df.head(5)
-
-    print("\nInteraction Methods")
-    groups_i_meth = df.groupby('i_meth_label')
-    for name,group in groups_i_meth :
-        print('{:d}: {:s}'.format(len(group),name))
-
-    print("\nParticipant Detection Methods")
-    groups_p_meth = df.groupby('p_meth_label')
-    for name,group in groups_p_meth :
-        print('{:d}: {:s}'.format(len(group),name))
+    df = pd.read_csv(args.inFile, sep='\t', header=0, index_col=0)
 
     n_rec = df.shape[0]
     test_set_size = 400
 
-    #test_ids = sorted(random.sample(range(n_rec), test_set_size))
-    test_ids = range(test_set_size)
+    if args.randomizeTestSet :
+        test_ids = sorted(random.sample(range(n_rec), test_set_size))
+    else:
+        test_ids = range(test_set_size)
     train_ids = []
     for i in range(n_rec):
         if i not in test_ids:
@@ -128,58 +101,17 @@ if __name__ == '__main__':
     df_train = df.iloc[train_ids,:]
     df_test = df.iloc[test_ids,:]
 
-    labels_i_meth = df['i_meth_label'].unique().tolist()
-    labels_p_meth = df['p_meth_label'].unique().tolist()
+    labels = df[args.labelColumn].unique().tolist()
 
-    y_train_i_meth = [labels_i_meth.index(i) for i in df_train['i_meth_label']]
-    y_train_p_meth = [labels_p_meth.index(p) for p in df_train['p_meth_label']]
-    y_test_i_meth = [labels_i_meth.index(i) for i in df_test['i_meth_label']]
-    y_test_p_meth = [labels_p_meth.index(p) for p in df_test['p_meth_label']]
-    '''
-    labels_i_meth = df['i_meth'].unique().tolist()
-    labels_p_meth = df['p_meth'].unique().tolist()
-
-    y_train_i_meth = [labels_i_meth.index(i) for i in df_train['i_meth']]
-    y_train_p_meth = [labels_p_meth.index(p) for p in df_train['p_meth']]
-    y_test_i_meth = [labels_i_meth.index(i) for i in df_test['i_meth']]
-    y_test_p_meth = [labels_p_meth.index(p) for p in df_test['p_meth']]
-    '''
-    #print(labels_i_meth_s.loc[df_train['i_meth_label']])
-
-    #print("\nParticipant Detection Methods")
-    #groups_p_meth = df.groupby('p_meth_label')
-    #labels_p_meth = []
-    #for name,group in groups_p_meth :
-    #    print('{:d}: {:s}'.format(len(group),name))
-    #    labels_p_meth.append(name)
-
-    #n_classes
-
-    #load embeddings
-    #print('loading word embeddings...')
-    #embeddings_index = {}
-    #f = codecs.open('/Users/Gully/Documents/Projects/2_active/corpora_local/embeddings_pubmed_files/all_text.txt.model.vec', encoding='utf-8')
-    #for line in tqdm(f):
-    #    values = line.rstrip().rsplit(' ')
-    #    word = values[0].lower()
-    #    coefs = np.asarray(values[1:], dtype='float32')
-    #    embeddings_index[word] = coefs
-    #f.close()
-    #print('found %s word vectors' % len(embeddings_index))
+    y_train = [labels.index(i) for i in df_train[args.labelColumn]]
+    y_test = [labels.index(i) for i in df_test[args.labelColumn]]
 
     #visualize word distribution
     df_train['doc_len'] = df_train['text'].apply(lambda words: len(words.split(" ")))
     mean_seq_len = np.round(df_train['doc_len'].mean()).astype(int)
     max_seq_len = np.round(df_train['doc_len'].mean() + df_train['doc_len'].std()).astype(int)
-    #sns.distplot(df_train['doc_len'], hist=True, kde=True, color='b', label='doc len')
-    #plt.axvline(x=mean_seq_len, color='black', linestyle='--', label='mean')
-    #plt.axvline(x=max_seq_len, color='red', linestyle='--', label='mean + std')
-    #plt.title('comment length'); plt.legend()
-    #plt.show()
 
-    #sns.set_style("whitegrid")
     np.random.seed(0)
-
     DATA_PATH = '../input/'
     EMBEDDING_DIR = '../input/'
 
@@ -219,9 +151,9 @@ if __name__ == '__main__':
     x_train = sequence.pad_sequences(word_seq_train, maxlen=max_seq_len)
     x_test = sequence.pad_sequences(word_seq_test, maxlen=max_seq_len)
 
-    n_classes = len(labels_i_meth)
-    y_train = keras.utils.to_categorical(y_train_i_meth, num_classes=n_classes)
-    y_test = keras.utils.to_categorical(y_test_i_meth, num_classes=n_classes)
+    n_classes = len(labels)
+    y_train_cat = keras.utils.to_categorical(y_train, num_classes=n_classes)
+    y_test_cat = keras.utils.to_categorical(y_test, num_classes=n_classes)
 
     #training params
     batch_size = 256
@@ -240,7 +172,7 @@ if __name__ == '__main__':
     for word, i in tqdm(word_index.items()):
         if i >= nb_words:
             continue
-        embedding_vector = rep_reader.get_word_rep(index_name,word)
+        embedding_vector = rep_reader.get_word_rep(args.esIndex,word)
         if (embedding_vector is not None) and len(embedding_vector) > 0:
             # words not found in embedding index will be all-zeros.
             embedding_matrix[i] = embedding_vector
@@ -250,23 +182,7 @@ if __name__ == '__main__':
 
     #print("words in document not found in the index : ", np.random.choice(words_not_found, 10))
 
-    # Model 1 CNN
-    '''
-    model = Sequential()
-    model.add(Embedding(nb_words, embed_dim,
-              weights=[embedding_matrix], input_length=max_seq_len, trainable=False))
-    model.add(Conv1D(num_filters, 7, activation='relu', padding='same'))
-    model.add(MaxPooling1D(2))
-    model.add(Conv1D(num_filters, 7, activation='relu', padding='same'))
-    model.add(GlobalMaxPooling1D())
-    model.add(Dropout(0.5))
-    model.add(Dense(32, activation='relu', kernel_regularizer=regularizers.l2(weight_decay)))
-    model.add(Dense(n_classes, activation='sigmoid'))  #multi-label (k-hot encoding)
 
-    adam = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
-    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['accuracy'])
-    model.summary()
-    '''
     '''
     model = Sequential()
     model.add(Embedding(nb_words, embed_dim,
@@ -292,26 +208,22 @@ if __name__ == '__main__':
                      epochs=num_epochs, callbacks=callbacks_list,
                      validation_split=0.1, shuffle=True)
     '''
-    model = Sequential()
-    model.add(Embedding(nb_words, embed_dim,
-                        weights=[embedding_matrix], input_length=max_seq_len, trainable=False))
-    model.add(LSTM(128))
-    model.add(Dropout(0.5))
-    model.add(Dense(n_classes, activation='sigmoid'))
+    k_config = SuperSimpleLSTMClassifier(embedding_matrix, max_seq_len, n_classes)
+    model = k_config.model
 
-    model_path = base_dir + '/' + model_file_name
+    model_path = args.modelFile
     if os.path.exists(model_path):
         model = load_model(model_path)
     else:
         model.compile(loss='binary_crossentropy',
                       optimizer='rmsprop',
                       metrics=['accuracy'])
-        model.fit(x_train, y_train, batch_size=batch_size,
+        model.fit(x_train, y_train_cat, batch_size=batch_size,
                     epochs=num_epochs, validation_split=0.1,
                     shuffle=True, verbose=2)
         model.save(model_path)
 
-    score = model.evaluate(x_test, y_test, verbose=1)
+    score = model.evaluate(x_test, y_test_cat, verbose=1)
     print('Test loss:', score[0])
     print('Test accuracy:', score[1])
 
@@ -322,13 +234,13 @@ if __name__ == '__main__':
     y_pred_raw = model.predict(x_test)
     print("gold\tpred\n")
     total = 0
-    for g,p in zip(y_test_i_meth,y_pred):
+    for g,p in zip(y_test,y_pred):
         s = 0
         if g==p :
             s = 1
-        print('%d\t%d\t%d'%(g,p,s))
+        #print('%d\t%d\t%d'%(g,p,s))
         total = total + s
 
-    print('Accuracy:%f'%(total/len(y_test_i_meth)))
-    cnf_matrix = confusion_matrix(y_test_i_meth, y_pred)
+    print('Accuracy:%f'%(total/len(y_test)))
+    cnf_matrix = confusion_matrix(y_test, y_pred)
     print(cnf_matrix)
