@@ -76,8 +76,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    #model_file_name = 'i_meth_label.model.h5'
-    rep_reader = RepReader(index_name=args.esIndex,elastic=True)
+    rep_reader = RepReader(index_name=args.esIndex, elastic=True)
+
     # From https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/input_fn/boston.py
 
     COLUMNS = ["ID", "i_meth", "p_meth", "pmid", "subfig", "text"]
@@ -181,7 +181,6 @@ if __name__ == '__main__':
     print('number of null word embeddings: %d' % np.sum(np.sum(embedding_matrix, axis=1) == 0))
 
     #print("words in document not found in the index : ", np.random.choice(words_not_found, 10))
-
 
     '''
     model = Sequential()

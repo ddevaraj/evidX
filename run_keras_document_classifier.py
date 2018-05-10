@@ -251,7 +251,7 @@ if __name__ == '__main__':
     #print("words in document not found in the index : ", np.random.choice(words_not_found, 10))
 
     # Model 1 CNN
-    '''
+
     model = Sequential()
     model.add(Embedding(nb_words, embed_dim,
               weights=[embedding_matrix], input_length=max_seq_len, trainable=False))
@@ -266,7 +266,7 @@ if __name__ == '__main__':
     adam = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
     model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['accuracy'])
     model.summary()
-    '''
+
     '''
     model = Sequential()
     model.add(Embedding(nb_words, embed_dim,
@@ -279,7 +279,7 @@ if __name__ == '__main__':
     model.add(GlobalAveragePooling1D())
     model.add(Dropout(0.5))
     model.add(Dense(n_classes, activation='sigmoid'))
-
+    
     model.compile(loss='binary_crossentropy',
                   optimizer='rmsprop',
                   metrics=['accuracy'])
@@ -291,13 +291,14 @@ if __name__ == '__main__':
     hist = model.fit(x_train, y_train, batch_size=batch_size,
                      epochs=num_epochs, callbacks=callbacks_list,
                      validation_split=0.1, shuffle=True)
-    '''
+    
     model = Sequential()
     model.add(Embedding(nb_words, embed_dim,
                         weights=[embedding_matrix], input_length=max_seq_len, trainable=False))
     model.add(LSTM(128))
     model.add(Dropout(0.5))
     model.add(Dense(n_classes, activation='sigmoid'))
+    '''
 
     model_path = base_dir + '/' + model_file_name
     if os.path.exists(model_path):
