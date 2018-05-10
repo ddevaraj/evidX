@@ -35,9 +35,9 @@ the word embeddings relevant to the molecular
 
 ## Running the classifier.
 
-'''
+```
 python classify_spreadsheet.py <path/to/spreadsheet> <text-column-name> <label-column-name> <es-index-name> <path/to/saved/keras/model> <test_set_size#>
-'''
+```
 so running the system on local data would look like this:
 ```
 python classify_spreadsheet.py /nas/evidx/corpora/intact/2018-04-17-cleanup/oa/intact_records_and_captions_labels.tsv text i_meth_label \
