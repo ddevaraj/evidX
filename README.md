@@ -30,8 +30,8 @@ This was  built by applying `Fasttext` to
 "Pharmaceutical Preparations"[mh] OR "Metabolism"[mh] OR "Cell Physiological Phenomena"[mh] OR
 "Genetic Phenomena"[mh])
 ```
-This query was design to use high-levle molecular MeSH terms to select only molecular papers from PubMed to keep 
-the word embeddings relevant to the molecular   
+This query was design to use high-level molecular MeSH terms to select only molecular papers from PubMed to keep 
+the word embeddings relevant to our domain of study: molecular interactions. 
 
 ## Running the classifier.
 
