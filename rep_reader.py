@@ -8,6 +8,8 @@ import string
 import re
 import time
 import sys
+from tqdm import tqdm
+import numpy as np
 
 from elasticsearch import Elasticsearch, helpers
 
@@ -16,6 +18,7 @@ class RepReader(object):
     rep_min = 100000.0
     rep_max = -100000.0
     rep_size = 0
+    MAX_NB_WORDS = 100000
 
     def __init__(self, embedding_file=None, index_name=None, elastic=False):
         self.elastic = elastic
@@ -239,7 +242,29 @@ class RepReader(object):
         #self.rep_max = float(meta_dict['rep_max'])
         self.rep_shape = int(meta_dict['rep_shape'].decode('UTF-8')),
         self.numpy_rng = numpy.random.RandomState(12345)
-        
+
+    def read_embedding_matrix_for_vocabulary(self, word_index):
+
+        # embedding matrix
+        print('preparing embedding matrix...')
+        words_not_found = []
+        nb_words = min(self.MAX_NB_WORDS, len(word_index) + 1)
+        embed_dim = self.rep_shape[0]
+        embedding_matrix = np.zeros((nb_words, embed_dim))
+        for word, i in tqdm(word_index.items()):
+            if i >= nb_words:
+                continue
+            embedding_vector = self.get_word_rep(self.es, word)
+            if (embedding_vector is not None) and len(embedding_vector) > 0:
+                # words not found in embedding index will be all-zeros.
+                embedding_matrix[i] = embedding_vector
+            else:
+                words_not_found.append(word)
+        print('number of null word embeddings: %d' % np.sum(np.sum(embedding_matrix, axis=1) == 0))
+
+        return embedding_matrix
+
+
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser(description="Train, cross-validate and run LSTM discourse tagger")
     argparser.add_argument('--repfile', metavar='REP-FILE', type=str, help="Gzipped embedding file")
