@@ -127,42 +127,46 @@ class RepReader(object):
 #        if len(w) == 0 :
 #            return None
 
+    def open_gzip_or_plain_file(self, embedding_file):
+
+        if embedding_file[-3:] == '.gz':
+            return gzip.open(embedding_file)
+        else:
+            return codecs.open(embedding_file, 'r', 'utf-8')
+
     def decode_ref_file(self, embedding_file):
-        #from gensim.models import word2vec
-        #model = word2vec.Word2Vec.load_word2vec_format('path/to/GoogleNews-vectors-negative300.bin', binary=True)
-        #model.save_word2vec_format('path/to/GoogleNews-vectors-negative300.txt', binary=False)
 
         start = time.time()
-        for i, x in enumerate(gzip.open(embedding_file)):
-            x_parts = x.decode('UTF-8').strip().split()
+        for i, x in enumerate(self.open_gzip_or_plain_file(embedding_file)):
+            x_parts = x.strip().split()
             if len(x_parts) == 2:
-                    continue
-    
+                continue
+
             w = self.preprocess_word_rep(x_parts[0])
             if w is None:
                 continue
-            vec = [ float(x) for x in x_parts[1:] ]
+            vec = [float(x) for x in x_parts[1:]]
 
             es_fields_keys = ('word', 'rep')
             es_fields_vals = (w, vec)
-            
+
             # Use Global variables to set maxima / minima,
             # TODO: Find a better way
             minimum = min(float(x) for x in x_parts[1:])
-            if( minimum < RepReader.rep_min):
+            if (minimum < RepReader.rep_min):
                 RepReader.rep_min = minimum
             maximum = max(float(x) for x in x_parts[1:])
-            if( maximum > RepReader.rep_max):
+            if (maximum > RepReader.rep_max):
                 RepReader.rep_max = maximum
-                            
+
             # We return a dict holding values from each line
             es_d = dict(zip(es_fields_keys, es_fields_vals))
 
-            if( i%100000 == 0 ):
-                print("it: " + str(i) + ", t=" + str(time.time()-start) + " s")
+            if (i % 100000 == 0):
+                print("it: " + str(i) + ", t=" + str(time.time() - start) + " s")
 
             # Return the row on each iteration
-            yield i, es_d     # <- Note the usage of 'yield'
+            yield i, es_d  # <- Note the usage of 'yield'
 
     def build_representation_elastic_index(self, embedding_file, index_name):
         
