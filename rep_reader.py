@@ -199,7 +199,7 @@ class RepReader(object):
             mapping_body = {
                 "properties" : {
                     "word" : {
-                        "type" : "text",
+                        "type" : "string",
                         "index" : "not_analyzed" 
                     }
                 }
