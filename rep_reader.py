@@ -43,7 +43,8 @@ class RepReader(object):
             #self.word_rep = {x.split()[0]: numpy.asarray([float(f) for f in x.strip().split()[1:]]) for x in gzip.open(embedding_file)}
             self.rep_min = min([x.min() for x in self.word_rep.values()])
             self.rep_max = max([x.max() for x in self.word_rep.values()])
-            self.rep_shape = self.word_rep.values()[0].shape
+            arbitrary_key = next(iter(self.word_rep))
+            self.rep_shape = self.word_rep[arbitrary_key].shape
             self.numpy_rng = numpy.random.RandomState(12345)
         else:
             self.elastic = True
