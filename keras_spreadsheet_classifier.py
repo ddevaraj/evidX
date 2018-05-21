@@ -62,27 +62,26 @@ class SpreadsheetClassificationExecution:
         else:
             raise ValueError("Incorrect Classifier Type: %s"%(classifier_type))
 
+        model = classifier.model
         if kerasFile is not None:
-            model_path = kerasFile
-            if os.path.exists(model_path):
-                classifier = load_model(model_path)
+            if os.path.exists(kerasFile):
+                model = load_model(kerasFile)
             else:
-                hist = classifier.fit(sd.x_train, sd.y_train, batch_size=batch_size,
+                hist = model.fit(sd.x_train, sd.y_train, batch_size=batch_size,
                             epochs=num_epochs, validation_split=0.1,
                             shuffle=True, verbose=2)
-                classifier.save(model_path)
+                model.save(kerasFile)
         else:
-            hist = classifier.fit(sd.x_train, sd.y_train, batch_size=batch_size,
+            hist = model.fit(sd.x_train, sd.y_train, batch_size=batch_size,
                              epochs=num_epochs, validation_split=0.1,
                              shuffle=True, verbose=2)
 
-        score = classifier.evaluate(sd.x_test, sd.y_test, verbose=1)
+        score = model.evaluate(sd.x_test, sd.y_test, verbose=1)
         self.loss = score[0]
         self.accuracy = score[1]
 
-        y_pred = classifier.predict_classes(sd.x_test)
+        y_pred = model.predict_classes(sd.x_test)
         self.cnf_matrix = confusion_matrix(np.argmax(sd.y_test, axis=1), y_pred)
-
 
 class SpreadsheetData:
 
@@ -162,7 +161,7 @@ class SpreadsheetData:
         self.y_test = keras.utils.to_categorical(y_test_base, num_classes=self.n_classes)
 
 
-class FancyConvolutionNetworkClassifier(Sequential):
+class FancyConvolutionNetworkClassifier:
 
     rep_max = -100000.0
     rep_size = 0
@@ -172,36 +171,36 @@ class FancyConvolutionNetworkClassifier(Sequential):
         nb_words = embedding_matrix.shape[0]
         embed_dim = embedding_matrix.shape[1]
 
-        self = Sequential()
-        self.add(Embedding(nb_words, embed_dim,
+        self.model = Sequential()
+        self.model.add(Embedding(nb_words, embed_dim,
             weights=[embedding_matrix], input_length=max_seq_len, trainable=False))
-        self.add(Conv1D(num_filters, 7, activation='relu', padding='same'))
-        self.add(MaxPooling1D(2))
-        self.add(Conv1D(num_filters, 7, activation='relu', padding='same'))
-        self.add(GlobalMaxPooling1D())
-        self.add(Dropout(0.5))
-        self.add(Dense(32, activation='relu', kernel_regularizer=regularizers.l2(weight_decay)))
-        self.add(Dense(n_classes, activation='sigmoid'))  #multi-label (k-hot encoding)
+        self.model.add(Conv1D(num_filters, 7, activation='relu', padding='same'))
+        self.model.add(MaxPooling1D(2))
+        self.model.add(Conv1D(num_filters, 7, activation='relu', padding='same'))
+        self.model.add(GlobalMaxPooling1D())
+        self.model.add(Dropout(0.5))
+        self.model.add(Dense(32, activation='relu', kernel_regularizer=regularizers.l2(weight_decay)))
+        self.model.add(Dense(n_classes, activation='sigmoid'))  #multi-label (k-hot encoding)
 
         adam = optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
-        self.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
-        self.summary()
+        self.model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
+        self.model.summary()
 
-class SuperSimpleLSTMClassifier(Sequential):
+class SuperSimpleLSTMClassifier:
 
     def __init__(self, embedding_matrix, max_seq_len, n_classes):
 
         nb_words = embedding_matrix.shape[0]
         embed_dim = embedding_matrix.shape[1]
 
-        self = Sequential()
-        self.add(Embedding(nb_words, embed_dim,
+        self.model = Sequential()
+        self.model.add(Embedding(nb_words, embed_dim,
                             weights=[embedding_matrix], input_length=max_seq_len, trainable=False))
-        self.add(LSTM(128))
-        self.add(Dropout(0.5))
-        self.add(Dense(n_classes, activation='sigmoid'))
-        self.compile(loss='categorical_crossentropy',
+        self.model.add(LSTM(128))
+        self.model.add(Dropout(0.5))
+        self.model.add(Dense(n_classes, activation='sigmoid'))
+        self.model.compile(loss='categorical_crossentropy',
                       optimizer='rmsprop',
                       metrics=['accuracy'])
-        self.summary()
+        self.model.summary()
 
