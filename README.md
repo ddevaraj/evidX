@@ -1,18 +1,24 @@
-# EvidX Source Code 
+# EvidX Source Code
 
-Here we put preliminary code for the EvidX project pertaining to various tasks.
-At present, this is only concerned with developing text classifiers for figure captions from molecular interaction papers, 
-but we will provide more structure as we progress. 
+Here we put code for the EvidX project pertaining to various tasks.
 
-# Use of ElasticSearch to index word embeddings
+- text classifiers for figure captions from molecular interaction papers. 
 
-This system uses word embeddings, but requires them to be loaded into an elastic search index (rather than loading them into memory). 
-This can be accomplished with the `rep_reader.py` script by executing the following command:
+# Two ways of loading word embeddings
+
+This system uses word embeddings which can be loaded directly into memory or from an elastic search index. 
+Both functions are accomplished with the `rep_reader.py` module. 
+
+## Building the ES index
+
+Build the ES index by executing the following command:
 
 ```
     python rep_reader.py --repfile <path/to/word/embedding/vec/file> --indexname 'elasticsearch-index-name-to-use'
 ```
-## Prerequisite data
+This provides a way of running the classfier on smaller machines (e.g., laptops) without having to load the whole embedding file which is helpful for debugging.  
+
+## A prebuilt embedding file
 
 Here is a gzipped archive of a good molecular biology word embedding file.
 It is located on the ISI `NAS` filesystem at the following location:
@@ -33,13 +39,22 @@ This was  built by applying `Fasttext` to
 This query was design to use high-level molecular MeSH terms to select only molecular papers from PubMed to keep 
 the word embeddings relevant to our domain of study: molecular interactions. 
 
-## Running the classifier.
+# Running the classifier.
 
+## From the embedding file. 
 ```
-python classify_spreadsheet.py <path/to/spreadsheet> <text-column-name> <label-column-name> <es-index-name> <path/to/saved/keras/model> <test_set_size#>
+python classify_spreadsheet.py --kerasFile /path/to/keras.model.file.h5 --repFile /path/to/embedding_file.vec.gz /path/to/spreadsheet.tsv <text-column-name> <label-column-name> <test_set_size#>
 ```
 so running the system on local data would look like this:
 ```
-python classify_spreadsheet.py /nas/evidx/corpora/intact/2018-04-17-cleanup/oa/intact_records_and_captions_labels.tsv text i_meth_label \
-    oa_all_fasttext /nas/evidx/corpora/intact/2018-04-17-cleanup/oa/i_meth_label_cnn.model.h5 400
+python /nas/home/burns/tools/python/evidX/classify_spreadsheet.py --kerasFile /nas/evidx/corpora/intact/2018-04-17-cleanup/oa/p_meth_lstm.model.h5 --repFile /nas/evidx/corpora/molecular_oa_pmc/all_text.txt.model.vec.gz /nas/evidx/corpora/intact/2018-04-17-cleanup/oa/intact_records_and_captions_labels.tsv text p_meth 400
 ```
+
+## From the elasticseach index. 
+```
+python classify_spreadsheet.py --kerasFile /path/to/keras.model.file.h5 --esIndex name.of.index /path/to/spreadsheet.tsv <text-column-name> <label-column-name> <test_set_size#>
+```
+
+## Output.
+
+The system trains a model, saves it to the specified \*.h5 file, holds out a test set and runs an evaluation on that test set. It prints it to standard output. 
