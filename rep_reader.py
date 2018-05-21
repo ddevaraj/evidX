@@ -33,7 +33,7 @@ class RepReader(object):
         if( elastic and embedding_file is not None) :
             self.build_representation_elastic_index(embedding_file, index_name)
         elif(embedding_file is not None): 
-            for x in gzip.open(embedding_file):
+            for x in tqdm(gzip.open(embedding_file)):
                 x_parts = x.strip().split()
                 if len(x_parts) == 2:
                     continue
@@ -79,6 +79,7 @@ class RepReader(object):
                 self.word_rep[w] = rep
 
         else:
+            print("can't find %s"%(w))
             rep = self.numpy_rng.uniform(low=self.rep_min, high=self.rep_max, size=self.rep_shape)
             self.word_rep[w] = rep
 
