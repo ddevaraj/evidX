@@ -37,7 +37,7 @@ class RepReader(object):
                 x_parts = x.strip().split()
                 if len(x_parts) == 2:
                     continue
-                word = x_parts[0]
+                word = x_parts[0].decode('UTF-8')
                 vec = numpy.asarray([float(f) for f in x_parts[1:]])
                 self.word_rep[word] = vec
             #self.word_rep = {x.split()[0]: numpy.asarray([float(f) for f in x.strip().split()[1:]]) for x in gzip.open(embedding_file)}
@@ -79,9 +79,7 @@ class RepReader(object):
                 self.word_rep[w] = rep
 
         else:
-            print("can't find %s"%(w))
-            rep = self.numpy_rng.uniform(low=self.rep_min, high=self.rep_max, size=self.rep_shape)
-            self.word_rep[w] = rep
+            return None
 
         return numpy.asarray(rep)
 
